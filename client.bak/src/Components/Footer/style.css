@@ -1,0 +1,52 @@
+.big {
+  height: 50vh;
+  margin: 0%;
+  padding: 0%;
+  width: 100vh;
+  background-color: #252525;
+}
+
+.bg-footer {
+  background-color: #252525;
+}
+
+.footer-mgn {
+  display: block;
+  margin-left: 0;
+  height: 10vh;
+  margin-top: 20px;
+}
+
+.footer-custom {
+  text-align: center;
+  display: inline-block;
+}
+
+.footer-custom-icon {
+  text-align: center;
+  display: inline-block;
+}
+
+.icon-margin {
+  margin-left: 20px;
+  margin-right: 20px;
+  transition: 1s;
+}
+
+.icon-margin:hover {
+  font-weight: bold;
+  color: #0080ff;
+  font-size: 1.3rem;
+}
+
+.footer-link {
+  text-decoration: none;
+  color: red;
+  transition: 1s;
+}
+
+.footer-link:hover {
+  color: #0080ff;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
