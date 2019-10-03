@@ -17,6 +17,10 @@
 h1{
   padding: 10px;
 }
+/* 
+h1, p, label {
+  text-align: left;
+} */
 
 input.error {
   border: 1px solid red;

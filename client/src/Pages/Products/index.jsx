@@ -110,7 +110,7 @@ class ProductsPage extends React.Component {
                       name={product.product_name}
                       description={product.product_description}
                       colors={product.colors}
-                      price={product.dataprice}
+                      product_id={product.id_products}
                       category={product.category}
                     />
                   );

@@ -18,7 +18,14 @@ function Products(props) {
             <i style={floatr}>{props.price}</i>
           </p>
         </div>
-        <button className="buy-btn">Buy Now</button>
+        <button className="buy-btn" type="submit">
+          <a
+            className="button-link"
+            href={`http://localhost:3000/api/productDelete/${props.product_id}`}
+          >
+            Buy Now
+          </a>
+        </button>
       </div>
     </div>
   );

@@ -42,6 +42,31 @@ function Navbar(props) {
                 Contact
               </a>
             </li>
+            <li>
+              <a className="nav-link" href="http://localhost:3000/api/users">
+                Users
+              </a>
+            </li>
+            <li>
+              <form
+                className="form-inline"
+                method="GET"
+                action={`http://localhost:3000/api/productFilter/SELECT * FROM price`}
+              >
+                <input
+                  className="form-control mr-sm-2"
+                  type="search"
+                  placeholder="Search"
+                  aria-label="Search"
+                ></input>
+                <button
+                  className="btn btn-outline-light my-2 my-sm-0"
+                  type="submit"
+                >
+                  Search
+                </button>
+              </form>
+            </li>
           </ul>
         </div>
       </nav>

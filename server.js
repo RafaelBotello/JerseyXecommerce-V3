@@ -1,8 +1,10 @@
-require("dotenv").config();
+// Define dependencies here
 
+require("dotenv").config();
 const express = require("express");
 const path = require("path");
 const helmet = require("helmet");
+const morgan = require("morgan");
 const PORT = process.env.PORT || 3001;
 const app = express();
 
@@ -13,8 +15,9 @@ const productsAPI = require("./routes/productsAPI");
 const deleteAPI = require("./routes/bonusAPIdelete");
 
 // Define middleware here
-app.use(helmet());
-app.use(express.urlencoded({ extended: true }));
+app.use(morgan()); //logs every request
+app.use(helmet()); //security
+app.use(express.urlencoded({ extended: true })); //Setting it to utf-8
 app.use(express.json());
 
 // Use apiRoutes
@@ -34,5 +37,5 @@ if (process.env.NODE_ENV === "production") {
 }
 
 app.listen(PORT, function() {
-  console.log(`Hello 🌎 ==> API server now on port ${PORT}!`);
+  console.log(`Hello worldd ==> API server now on port ${PORT}!`);
 });
