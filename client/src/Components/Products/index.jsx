@@ -6,7 +6,7 @@ function Products(props) {
     float: "right"
   };
   return (
-    <div className="testFragment">
+    <div className="container-product">
       <div data-price={props.dataprice1} className={props.class1}>
         <div data-price={props.dataprice2} className={props.class2} />
         <div className="text-space">

@@ -6,9 +6,11 @@ const helmet = require("helmet");
 const PORT = process.env.PORT || 3001;
 const app = express();
 
+// Imported API's
 const usersAPI = require("./routes/usersAPI");
 const productFilterAPI = require("./routes/productFilterAPI");
 const productsAPI = require("./routes/productsAPI");
+const deleteAPI = require("./routes/bonusAPIdelete");
 
 // Define middleware here
 app.use(helmet());
@@ -19,6 +21,7 @@ app.use(express.json());
 app.use("/api", productsAPI);
 app.use("/api", productFilterAPI);
 app.use("/api", usersAPI);
+app.use("/api", deleteAPI);
 
 // Send every request to the React app
 // Define any API routes before this runs

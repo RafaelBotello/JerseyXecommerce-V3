@@ -4,13 +4,14 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
-    "start:prod": "node server.js",
-    "start:dev": "concurrently \"nodemon --ignore 'client/*'\" \"npm run client\"",
-    "client": "cd client && npm run start",
-    "install": "cd client && npm install",
-    "build": "cd client && npm run build",
-    "heroku-postbuild": "npm run build"
+    "test": "mocha",
+    "start": "export NODE_ENV=production && yarn start:prod || yarn start:dev",
+    "start:prod": "nodemon server.js",
+    "start:dev": "concurrently \"nodemon --ignore 'client/*'\" \"yarn client\"",
+    "client": "cd client && yarn start",
+    "install": "cd client && yarn install",
+    "build": "cd client && yarn build",
+    "heroku-postbuild": "yarn build"
   },
   "author": "Rafael Botello",
   "license": "ISC",
@@ -20,13 +21,16 @@
   },
   "dependencies": {
     "axios": "^0.19.0",
+    "chai": "^4.2.0",
     "cors": "^2.8.5",
     "dotenv": "^8.1.0",
     "express": "^4.17.1",
     "helmet": "^3.21.1",
     "if-env": "^1.0.4",
     "inquirer": "^7.0.0",
+    "mocha": "^6.2.1",
     "mysql": "^2.17.1",
-    "node": "^12.10.0"
+    "node": "^12.10.0",
+    "request": "^2.88.0"
   }
 }

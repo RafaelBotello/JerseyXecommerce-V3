@@ -1,6 +1,11 @@
 #products{
     height: auto;
+    padding-left: 5%;
     margin-bottom: 150px;
+}
+
+.product-content{
+    padding: 0;
 }
 
 .img-text {
@@ -13,23 +18,26 @@
     font-weight: bold;
 }
 
-.testFragment {
+.container-product {
     display: block;
+    margin: 10px;
     border: 1px white solid;
 }
 
-.testFragment:hover {
+.container-product:hover {
     border: 1px black solid;
 }
 
 .text-space {
-    width: 20vw;
+    width: 316px;
     display: block;
 }
 
 .buy-btn{
-    height: 10%;
+    height: 40px;
     width: 316px;
+    background-color: #0e1111;
+    color: #efefef;
 }
 
 
@@ -41,6 +49,12 @@
     display: block;
     background-size: cover;
     background-position: center;
+}
+
+@media only screen and (max-width: 790px){
+    #products{
+        margin-left: 20px;
+    }
 }
 
 .prod-brazil{

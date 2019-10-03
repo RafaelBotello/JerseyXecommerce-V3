@@ -1,6 +1,6 @@
-.App {
+/* .App {
   text-align: center;
-}
+} */
 
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
@@ -20,18 +20,17 @@
 }
 
 .App-link {
-  color: #61dafb;
+  color: #282c34;
 }
 
 .main-cont {
   height: 80%;;
-  margin-top: 100px;
+  margin-top: 110px;
 }
 
 @media only screen and (max-width: 790px) {
   .main-cont {
     height: 80%;
-    margin-top: 210px;
   }
 }
 

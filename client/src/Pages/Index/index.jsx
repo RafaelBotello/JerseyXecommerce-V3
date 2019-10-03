@@ -4,6 +4,7 @@ import Footer from "../../Components/Footer";
 import Navbar from "../../Components/Navbar";
 
 function Home() {
+  // Inline Styles
   let review = {
     padding: "30px",
     fontSize: "2.2rem"
@@ -27,19 +28,19 @@ function Home() {
         classli3={"nav-item"}
       />
       <div
-        id="carouselExampleIndicators"
+        id="carouselIndicators"
         className="carousel slide"
         data-ride="carousel"
       >
         <ol className="carousel-indicators">
           <li
-            data-target="#carouselExampleIndicators"
+            data-target="#carouselIndicators"
             data-slide-to="0"
             className="active"
           />
-          <li data-target="#carouselExampleIndicators" data-slide-to="1" />
-          <li data-target="#carouselExampleIndicators" data-slide-to="2" />
-          <li data-target="#carouselExampleIndicators" data-slide-to="3" />
+          <li data-target="#carouselIndicators" data-slide-to="1" />
+          <li data-target="#carouselIndicators" data-slide-to="2" />
+          <li data-target="#carouselIndicators" data-slide-to="3" />
         </ol>
         <div className="carousel-inner">
           <div className="carousel-item active">
@@ -105,7 +106,7 @@ function Home() {
         </div>
         <a
           className="carousel-control-prev"
-          href="#carouselExampleIndicators"
+          href="#carouselIndicators"
           role="button"
           data-slide="prev"
         >
@@ -114,7 +115,7 @@ function Home() {
         </a>
         <a
           className="carousel-control-next"
-          href="#carouselExampleIndicators"
+          href="#carouselIndicators"
           role="button"
           data-slide="next"
         >
@@ -130,7 +131,7 @@ function Home() {
           </p>
         </div>
         <div className="col-md-7 bg-light text-dark" style={jerseyx}>
-          <h2>Who are we</h2>
+          <h2>Who we are</h2>
           <p>
             A global team behind a smart website Jersey X is kind of a peculiar
             bunch of very different people from all corners of the globe. One

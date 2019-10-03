@@ -1,10 +1,5 @@
 .parallax {
-  /* The image used */
-
-  /* Set a specific height */
   height: 80vh;
-
-  /* Create the parallax scrolling effect */
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -17,6 +12,10 @@
 
 .parallax-2 {
   background-image: url("./img/slide1.jpg");
+}
+
+h1{
+  padding: 10px;
 }
 
 input.error {

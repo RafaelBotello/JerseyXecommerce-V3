@@ -1,17 +1,20 @@
 import React from "../../../node_modules/react";
-// import "../../lib/js/filter";
 import "./style.css";
 
 const Filters = props => {
-  const { handleFilter } = props;
+  const { handleFilter, handleFilterLow, handleFilterHigh } = props;
 
   let block = {
     border: "2px solid black",
     display: "block",
     margin: "0",
+    marginLeft: "auto",
+    marginRight: "auto",
+    textAlign: "center",
+    paddingLeft: "5%",
     borderRadius: "0",
     marginTop: "1px",
-    width: "23.7vw"
+    width: "100%"
   };
 
   return (
@@ -85,6 +88,23 @@ const Filters = props => {
             >
               Show all
             </button>
+            <hr></hr>
+            <button
+              style={block}
+              value="lowtohigh"
+              className="btn btn-white"
+              onClick={handleFilterLow}
+            >
+              Low to High
+            </button>
+            <button
+              style={block}
+              value="hightolow"
+              className="btn btn-white"
+              onClick={handleFilterHigh}
+            >
+              High to Low
+            </button>
           </div>
         </div>
       </div>
@@ -148,6 +168,23 @@ const Filters = props => {
             onClick={handleFilter}
           >
             Show all
+          </button>
+          <hr></hr>
+          <button
+            style={block}
+            value="lowtohigh"
+            className="btn btn-white"
+            onClick={handleFilterLow}
+          >
+            Low to High
+          </button>
+          <button
+            style={block}
+            value="hightolow"
+            className="btn btn-white"
+            onClick={handleFilterHigh}
+          >
+            High to Low
           </button>
         </div>
       </div>

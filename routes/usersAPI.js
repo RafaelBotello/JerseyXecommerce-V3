@@ -1,19 +1,7 @@
 // Contacts API
 require("dotenv").config();
 const router = require("express").Router();
-const mysql = require("mysql");
-
-const connection = mysql.createConnection({
-  host: process.env.DB_HOST,
-  user: process.env.DB_USER,
-  password: process.env.DB_PASS,
-  database: process.env.DB
-});
-
-connection.connect(function(err) {
-  if (err) throw err;
-  console.log("Connection successful API user");
-});
+const connection = require("./SQLconnection");
 
 router.get("/users", (req, res) => {
   connection.query("SELECT * FROM users", (err, data) => {

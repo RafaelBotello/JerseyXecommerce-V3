@@ -25,41 +25,66 @@ function Footer() {
       <div className="container" style={stylecont}>
         <div className="row">
           <div className="col-md-12 col-xs-12 text-center py-5">
-            <div className="flex-center">
+            <div className="flex-center limit-con">
               <a
                 href="https://google.com"
                 target="blank"
-                className="icon-margin gplus-ic"
+                className="icon gplus-ic"
               >
-                <FontAwesomeIcon icon={faGoogle} color="red" size="3x" />
+                <FontAwesomeIcon
+                  className="limit"
+                  icon={faGoogle}
+                  color="black"
+                  size="3x"
+                />
               </a>
               <a
                 href="https://facebook.com"
                 target="blank"
-                className="icon-margin fb-ic"
+                className="icon fb-ic"
               >
-                <FontAwesomeIcon icon={faFacebookF} color="red" size="3x" />
+                <FontAwesomeIcon
+                  className="limit"
+                  icon={faFacebookF}
+                  color="black"
+                  size="3x"
+                />
               </a>
               <a
                 href="https://twitter.com"
                 target="blank"
-                className="icon-margin tw-ic"
+                className="icon tw-ic"
               >
-                <FontAwesomeIcon icon={faTwitter} color="red" size="3x" />
+                <FontAwesomeIcon
+                  className="limit"
+                  icon={faTwitter}
+                  color="black"
+                  size="3x"
+                />
               </a>
               <a
                 href="https://www.instagram.com/jimmyplox/?hl=en"
                 target="blank"
-                className="icon-margin ins-ic"
+                className="icon ins-ic"
               >
-                <FontAwesomeIcon icon={faInstagram} color="red" size="3x" />
+                <FontAwesomeIcon
+                  className="limit"
+                  icon={faInstagram}
+                  color="black"
+                  size="3x"
+                />
               </a>
               <a
                 href="https://youtube.com"
                 target="blank"
-                className="icon-margin pin-yt"
+                className="icon pin-yt"
               >
-                <FontAwesomeIcon icon={faYoutube} color="red" size="3x" />
+                <FontAwesomeIcon
+                  className="limit"
+                  icon={faYoutube}
+                  color="black"
+                  size="3x"
+                />
               </a>
             </div>
           </div>
@@ -74,7 +99,7 @@ function Footer() {
           {" "}
           Jersey X
         </a>
-        <p>Last updated: August 2019</p>
+        <p>Last updated: Oct 1 2019</p>
       </div>
     </footer>
   );

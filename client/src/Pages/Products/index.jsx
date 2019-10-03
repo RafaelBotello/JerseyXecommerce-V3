@@ -2,7 +2,6 @@ import React from "../../../node_modules/react";
 import Navbar from "../../Components/Navbar";
 import "../../Components/Products/style.css";
 import Products from "../../Components/Products";
-// import products from "../../products/products.json";
 import Filters from "../../Components/Filters";
 import Footer from "../../Components/Footer";
 
@@ -36,6 +35,28 @@ class ProductsPage extends React.Component {
       });
   }
 
+  onHandleFilterLow = e => {
+    console.log(this.state.products);
+    console.log(this.state.error);
+    let productLow = this.state.products.sort(function(a, b) {
+      return a.price - b.price;
+    });
+    this.setState({
+      products: productLow
+    });
+  };
+
+  onHandleFilterHigh = e => {
+    console.log(this.state.products);
+    console.log(this.state.error);
+    let productHigh = this.state.products.sort(function(a, b) {
+      return b.price - a.price;
+    });
+    this.setState({
+      products: productHigh
+    });
+  };
+
   onHandleFilter = e => {
     const filter = e.target.value;
     console.log(this.state.products);
@@ -62,30 +83,39 @@ class ProductsPage extends React.Component {
             classli3={"nav-item"}
           />
           <div className="row main-cont">
-            <Filters handleFilter={this.onHandleFilter} />
-            <div id="products" className="col-md-9  bg-light row">
-              {this.state.products.map((product, index) => {
-                // Loop through each product
-                // And render them all
-                if (filters.length > 0 && !filters.includes(product.category)) {
-                  return;
-                }
+            <Filters
+              handleFilter={this.onHandleFilter}
+              handleFilterLow={this.onHandleFilterLow}
+              handleFilterHigh={this.onHandleFilterHigh}
+            />
+            <div id="products" className="col-md-9 bg-light">
+              <div className="row">
+                {this.state.products.map((product, index) => {
+                  // Loop through each product
+                  // And render them all
+                  if (
+                    filters.length > 0 &&
+                    !filters.includes(product.category)
+                  ) {
+                    return;
+                  }
 
-                return (
-                  <Products
-                    key={index}
-                    dataprice1={product.price}
-                    class1={product.class1}
-                    dataprice2={product.price}
-                    class2={product.class2}
-                    name={product.product_name}
-                    description={product.product_description}
-                    colors={product.colors}
-                    price={product.dataprice}
-                    category={product.category}
-                  />
-                );
-              })}
+                  return (
+                    <Products
+                      key={index}
+                      dataprice1={product.price}
+                      class1={product.class1}
+                      dataprice2={product.price}
+                      class2={product.class2}
+                      name={product.product_name}
+                      description={product.product_description}
+                      colors={product.colors}
+                      price={product.dataprice}
+                      category={product.category}
+                    />
+                  );
+                })}
+              </div>
             </div>
             <Footer />
           </div>
